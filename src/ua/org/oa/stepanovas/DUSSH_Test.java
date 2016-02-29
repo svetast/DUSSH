@@ -1,8 +1,8 @@
 package ua.org.oa.stepanovas;
 
-public class DUSSH_Test {
+public class DUSSH_Test {   //  класс ДЮСШ
 
-	private static final int speed10 = 10;
+	private static final int speed10 = 10; // заданная скорость для целей сравнения со скоростью каждого спортсмена
 
 	public static void main(String[] args) {
 		Student[] myArr;
@@ -34,7 +34,7 @@ public class DUSSH_Test {
 		for (i = 0; i < myArr.length; i++) {
 			averageSpeed = averageSpeed + myArr[i].getSpeed();
 		}
-		averageSpeed = averageSpeed / myArr.length; // средняя скорость
+		averageSpeed = averageSpeed / myArr.length; // определяю среднюю скорость
 		System.out.println("Средняя скорость спортсменов  = " + averageSpeed + " m/sec");
 
 		float speedEqual = 0;
@@ -59,7 +59,7 @@ public class DUSSH_Test {
 			speedConst = myArr[f].getSpeed();
 			String fname = myArr[f].getfName();
 			String lname = myArr[f].getlName();
-			if (speedConst >= speed10) {
+			if (speedConst >= speed10) {   // сравниваю скорость каждого спортсмена с заданной скоростью 10 м/с
 				System.out.println(fname + "   "+ lname + "   "+ speedConst +  "  м/сек - эта скорость выше 10 м/сек ");
 			} else {
 				System.out.println(fname + "   "+ lname + "   "+ speedConst +  "  м/сек - эта скорость ниже 10 м/сек ");

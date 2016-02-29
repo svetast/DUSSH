@@ -1,11 +1,11 @@
 package ua.org.oa.stepanovas;
 
-public class Student {
+public class Student {  // спотрсмены ДЮСШ  
 		
-	private static final int speed_max = 40;
-	private static final double speed_min = 0.1;
-	private static final int age_max = 16;
-	private static final int age_min = 6;
+	private static final int speed_max = 40; // максимальная скорость бега спрортсмена
+	private static final double speed_min = 0.1; //  минимальная скорость бега спрортсмена
+	private static final int age_max = 16; // максимальный возраст спортсмена
+	private static final int age_min = 6;  // мимнимальный возраст спортсмена
 	private String lName;   //Student's last name
 	private String fName;   // Student's first name
 	private int age;         //Student's age
@@ -26,6 +26,7 @@ public class Student {
 	public float getSpeed() {
 		return this.speed;
 	}
+	// Проверки на отсутствие пустых полей в данных
 	
 	public void setParams(String nfName, String nlName, int nage, float nspeed) {
 		if(nfName.isEmpty()) {
