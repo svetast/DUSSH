@@ -1,57 +1,67 @@
 package ua.org.oa.stepanovas;
 
 public class Student {  // спотрсмены ДЮСШ  
-		
-	private static final int speed_max = 40; // максимальная скорость бега спрортсмена
-	private static final double speed_min = 0.1; //  минимальная скорость бега спрортсмена
-	private static final int age_max = 16; // максимальный возраст спортсмена
-	private static final int age_min = 6;  // мимнимальный возраст спортсмена
-	private String lName;   //Student's last name
-	private String fName;   // Student's first name
-	private int age;         //Student's age
-	private float speed;     //Student's speed
-	
-	public String getlName() {
-		return this.lName;
-	}
-	
-	
-	public String getfName() {
-		return this.fName;
-	}
-		
-	public int getAge() {
-		return this.age;
-	}
-	public float getSpeed() {
-		return this.speed;
-	}
-	// Проверки на отсутствие пустых полей в данных
-	
-	public void setParams(String nfName, String nlName, int nage, float nspeed) {
-		if(nfName.isEmpty()) {
-		System.out.println("Не задано имя!");
-		return;
-		}
-		if(nlName.isEmpty()) {
-		System.out.println("Не задана фамилия !");
-		return;
-		}		
-		if(nage < age_min || nage > age_max) {
-			System.out.println("Неправильный возраст" + nage +"!");
-			return;
-			}		
-		if(nspeed < speed_min || nspeed > speed_max) {
-		System.out.println("Неправильная скорость" + nspeed +"!");
-		return;
-		}	
-		
-		fName = nfName;
-		lName = nlName;
-		age =  nage;
-	    speed = nspeed;
-	}
+        
+    private static final int SPEED_MAX = 40; // максимальная скорость бега спрортсмена
+    private static final double SPEED_MIN = 0.1; //  минимальная скорость бега спрортсмена
+    private static final int AGE_MAX = 16; // максимальный возраст спортсмена
+    private static final int AGE_MIN = 6;  // мимнимальный возраст спортсмена
+    private String lName;   //Student's last name
+    private String fName;   // Student's first name
+    private int age;         //Student's age
+    private float speed;     //Student's speed
+    
+    public String getlName() {
+        return this.lName;
+    }
+    
+    
+    public String getfName() {
+        return this.fName;
+    }
+        
+    public int getAge() {
+        return this.age;
+    }
+    public float getSpeed() {
+        return this.speed;
+    }
+    // Проверки на отсутствие пустых полей в данных
+    
+    public void setParams(String nfName, String nlName, int nage, float nspeed) {
+        if(nfName.isEmpty()) {
+        System.out.println("Не задано имя!");
+        return;
+        }
+        if(nlName.isEmpty()) {
+        System.out.println("Не задана фамилия !");
+        return;
+        }       
+        if(nage < AGE_MIN || nage > AGE_MAX) {
+            System.out.println("Неправильный возраст" + nage +"!");
+            return;
+            }       
+        if(nspeed < SPEED_MIN || nspeed > SPEED_MAX) {
+        System.out.println("Неправильная скорость" + nspeed +"!");
+        return;
+        }   
+        
+        fName = nfName;
+        lName = nlName;
+        age =  nage;
+        speed = nspeed;
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 /*HW 2 :  Для решения задачи создать java программу, удовлетворяющую следующим требованиям:
 1. Спроектировать базовый класс, содержащий в качестве полей объекты других классов.

@@ -2,68 +2,68 @@ package ua.org.oa.stepanovas;
 
 public class DUSSH_Test {   //  класс ДЮСШ
 
-	private static final int speed10 = 10; // заданная скорость для целей сравнения со скоростью каждого спортсмена
+    private static final int SPEED10 = 10; // заданная скорость для целей сравнения со скоростью каждого спортсмена
 
-	public static void main(String[] args) {
-		Student[] myArr;
-		myArr = new Student[10];
-		myArr[0] = new Student();
-		myArr[0].setParams("Tom", "Black", 12, 9);
-		myArr[1] = new Student();
-		myArr[1].setParams("Juliya", "Hills", 15, 21);
-		myArr[2] = new Student();
-		myArr[2].setParams("Bob", "Devis", 15, 14);
-		myArr[3] = new Student();
-		myArr[3].setParams("Leo", "Zimens", 16, 18);
-		myArr[4] = new Student();
-		myArr[4].setParams("Lu", "Andys", 15, 15);
-		myArr[5] = new Student();
-		myArr[5].setParams("Rob", "Dinny", 13, 11);
-		myArr[6] = new Student();
-		myArr[6].setParams("Ann", "Adlons", 11, 7);
-		myArr[7] = new Student();
-		myArr[7].setParams("Hug", "Belt", 14, 11);
-		myArr[8] = new Student();
-		myArr[8].setParams("Diggy", "Ands", 15, 22);
-		myArr[9] = new Student();
-		myArr[9].setParams("Lu", "Andys", 12, 8);
+    public static void main(String[] args) {
+        Student[] myArr;
+        myArr = new Student[10];
+        myArr[0] = new Student();
+        myArr[0].setParams("Tom", "Black", 12, 9);
+        myArr[1] = new Student();
+        myArr[1].setParams("Juliya", "Hills", 15, 21);
+        myArr[2] = new Student();
+        myArr[2].setParams("Bob", "Devis", 15, 14);
+        myArr[3] = new Student();
+        myArr[3].setParams("Leo", "Zimens", 16, 18);
+        myArr[4] = new Student();
+        myArr[4].setParams("Lu", "Andys", 15, 15);
+        myArr[5] = new Student();
+        myArr[5].setParams("Rob", "Dinny", 13, 11);
+        myArr[6] = new Student();
+        myArr[6].setParams("Ann", "Adlons", 11, 7);
+        myArr[7] = new Student();
+        myArr[7].setParams("Hug", "Belt", 14, 11);
+        myArr[8] = new Student();
+        myArr[8].setParams("Diggy", "Ands", 15, 22);
+        myArr[9] = new Student();
+        myArr[9].setParams("Lu", "Andys", 12, 8);
 
-		float averageSpeed;
-		int i;
-		averageSpeed = 0;
-		for (i = 0; i < myArr.length; i++) {
-			averageSpeed = averageSpeed + myArr[i].getSpeed();
-		}
-		averageSpeed = averageSpeed / myArr.length; // определяю среднюю скорость
-		System.out.println("Средняя скорость спортсменов  = " + averageSpeed + " m/sec");
+        float averageSpeed;
+        int i;
+        averageSpeed = 0;
+        for (i = 0; i < myArr.length; i++) {
+            averageSpeed = averageSpeed + myArr[i].getSpeed();
+        }
+        averageSpeed = averageSpeed / myArr.length; // определяю среднюю скорость
+        System.out.println("Средняя скорость спортсменов  = " + averageSpeed + " m/sec");
 
-		float speedEqual = 0;
-		int j;
-		for (j = 0; j < myArr.length; j++) {
-			speedEqual = myArr[j].getSpeed();
-			String fname = myArr[j].getfName();
-			String lname = myArr[j].getlName();
-			if (speedEqual < averageSpeed) { // скорость ниже средней
-			// System.out.println("Name:");
-				System.out.println(fname + "   "+ lname + "   "+ speedEqual + "   м/сек - этот результат ниже средней скорости"
-						+ averageSpeed + " m/ sec");
-			} else // скорость выше средней
-			{
-				System.out.println(fname +"   "+ lname + "   "+speedEqual + "   м/сек - этот результат выше средней скорости"
-						+ averageSpeed + " m/ sec");
-			}
-		}   
-		float speedConst = speed10;
-		int f;
-		for (f = 0; f < myArr.length; f++) {
-			speedConst = myArr[f].getSpeed();
-			String fname = myArr[f].getfName();
-			String lname = myArr[f].getlName();
-			if (speedConst >= speed10) {   // сравниваю скорость каждого спортсмена с заданной скоростью 10 м/с
-				System.out.println(fname + "   "+ lname + "   "+ speedConst +  "  м/сек - эта скорость выше 10 м/сек ");
-			} else {
-				System.out.println(fname + "   "+ lname + "   "+ speedConst +  "  м/сек - эта скорость ниже 10 м/сек ");
-			}
-		}
-	}
+        float speedEqual = 0;
+        int j;
+        for (j = 0; j < myArr.length; j++) {
+            speedEqual = myArr[j].getSpeed();
+            String fname = myArr[j].getfName();
+            String lname = myArr[j].getlName();
+            if (speedEqual < averageSpeed) { // скорость ниже средней
+            // System.out.println("Name:");
+                System.out.println(fname + "   "+ lname + "   "+ speedEqual + "   м/сек - этот результат ниже средней скорости"
+                        + averageSpeed + " m/ sec");
+            } else // скорость выше средней
+            {
+                System.out.println(fname +"   "+ lname + "   "+speedEqual + "   м/сек - этот результат выше средней скорости"
+                        + averageSpeed + " m/ sec");
+            }
+        }   
+        float speedConst = SPEED10;
+        int f;
+        for (f = 0; f < myArr.length; f++) {
+            speedConst = myArr[f].getSpeed();
+            String fname = myArr[f].getfName();
+            String lname = myArr[f].getlName();
+            if (speedConst >= SPEED10) {   // сравниваю скорость каждого спортсмена с заданной скоростью 10 м/с
+                System.out.println(fname + "   "+ lname + "   "+ speedConst +  "  м/сек - эта скорость выше 10 м/сек ");
+            } else {
+                System.out.println(fname + "   "+ lname + "   "+ speedConst +  "  м/сек - эта скорость ниже 10 м/сек ");
+            }
+        }
+    }
 }
