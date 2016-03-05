@@ -37,6 +37,8 @@ public class Student {  // the student's in DUSSH
         System.out.println("not entered last name!");
         return;
         }       
+        
+     // Checking on wrong speed and age
         if(nage < AGE_MIN || nage > AGE_MAX) {
             System.out.println("This age is wrong " + nage +"!");
             return;

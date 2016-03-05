@@ -43,13 +43,13 @@ public class DUSSH_Test {
             speedEqual = myArr[j].getSpeed();
             String fname = myArr[j].getfName();
             String lname = myArr[j].getlName();
-            if (speedEqual < averageSpeed) { // скорость ниже средней
+            if (speedEqual < averageSpeed) { 
             // System.out.println("Name:");
-                System.out.println(fname + "   "+ lname + "   "+ speedEqual + "   м/сек - этот результат ниже средней скорости"
+                System.out.println(fname + "   "+ lname + "   "+ speedEqual + "   m/sec - this speed is higher than average speed " // этот результат выше средней скорости"
                         + averageSpeed + " m/ sec");
-            } else // скорость выше средней
+            } else 
             {
-                System.out.println(fname +"   "+ lname + "   "+speedEqual + "   м/сек - этот результат выше средней скорости"
+                System.out.println(fname +"   "+ lname + "   "+speedEqual + "   m/sec - this speed is lower than average speed "// этот результат ниже средней скорости"
                         + averageSpeed + " m/ sec");
             }
         }   
@@ -59,10 +59,10 @@ public class DUSSH_Test {
             speedConst = myArr[f].getSpeed();
             String fname = myArr[f].getfName();
             String lname = myArr[f].getlName();
-            if (speedConst >= SPEED10) {   // сравниваю скорость каждого спортсмена с заданной скоростью 10 м/с
-                System.out.println(fname + "   "+ lname + "   "+ speedConst +  "  м/сек - эта скорость выше 10 м/сек ");
+            if (speedConst >= SPEED10) {   
+            	System.out.println(fname + "   "+ lname + "   "+ speedConst +  " m/sec -this speed is higher than 10 m/sec "); //м/сек - эта скорость выше 10 м/сек ");
             } else {
-                System.out.println(fname + "   "+ lname + "   "+ speedConst +  "  м/сек - эта скорость ниже 10 м/сек ");
+                System.out.println(fname + "   "+ lname + "   "+ speedConst +  "  m/sec - this speed is lower than 10  m/sec ");////м/сек - эта скорость ниже 10 м/сек ");
             }
         }
     }
