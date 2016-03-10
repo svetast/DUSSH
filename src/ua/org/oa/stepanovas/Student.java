@@ -35,7 +35,7 @@ public class Student {  // the student's in DUSSH
         return;
         }
         if(nlName.isEmpty()) {
-        System.out.println("not entered last name!");
+        System.out.println("Not entered last name!");
         return;
         }       
         
